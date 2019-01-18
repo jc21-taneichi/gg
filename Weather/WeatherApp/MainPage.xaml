@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WeatherApp"
+             x:Class="WeatherApp.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <StackLayout Orientation="Horizontal">
+            <DatePicker Format="MM/dd" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start"/>
+            <Label Text="現在地" x:Name="genzai"/>
+            <Button Text="設定"  HorizontalOptions="End" x:Name="Button1"/>
+
+            
+        </StackLayout>
+
+        <Label Text="本日のスケジュール" FontSize="20"/>
+        <Label Text="" x:Name="a"/>
+        <Label></Label>
+        <Label></Label>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            
+
+            <Label Grid.Column="0" Grid.Row="0" Text="天気" HorizontalOptions="Center" FontSize="20"/>
+            <Label Grid.Column="1" Grid.Row="0" Text="スケジュール" HorizontalOptions="Center" FontSize="20"/>
+        </Grid>
+
+    </StackLayout>  
+</ContentPage>

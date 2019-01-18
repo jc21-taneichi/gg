@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="設定" FontSize="28"/>
+            <Label></Label>
+            <Label></Label>
+            <Label Text="現在地"
+                   HorizontalOptions="StartAndExpand" FontSize="20"/>
+
+            <Entry x:Name="Searchcity"
+                   Grid.Column="1"
+                   Grid.Row="1" 
+                   Margin="5,0"
+                   Text="" />
+
+            <Button Grid.Row="1" 
+                    Grid.Column="2"
+                    Text="選択" 
+                    Clicked="OnGetWeatherButtonClicked"/>
+
+            
+            <Label Text="現在地" />
+            <Label Text="{Binding Title}" />
+
+            <Label Text="天気" />
+            <Label Text="{Binding Weather[0].Description}" />
+
+            
+
+
+            <Label></Label>
+            <Label></Label>
+
+            <Label Text="通知" 
+                   HorizontalOptions="StartAndExpand" FontSize="20"/>
+            <Label></Label>
+            <StackLayout Orientation="Horizontal">
+                <Switch IsToggled="false" />
+                <Label Text="通知を使用する" FontSize="20"/>
+            </StackLayout>
+            <Label></Label>
+            <Label></Label>
+
+            <Button Text="戻る" HorizontalOptions="End" x:Name="Button2" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
